@@ -1,0 +1,146 @@
+{% extends 'backoffice/base.html' %}
+{% load i18n backoffice wysiwyg static %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'stylesheets/msdropdown/dd.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'stylesheets/sites_flatpage.css' %}">
+{% wysiwyg_setup %}
+{% endblock %}
+flatpage.css
+{% block content %}
+<div class="contentHeader">
+    <h3>{% trans "Create Site Page" %}</h3>
+</div>
+
+{{ messages|display_messages }}
+
+<form action="" method="POST">
+    {% csrf_token %} 
+    <div class="inputGroup">
+        <label class="inputLabel">{{ form.title.label }} *</label>
+        <div class="inputWrap">
+            {{ form.title }}
+            {{ form.title.errors|display_field_errors }}
+        </div>
+    </div>  
+    <div class="inputGroup">
+        <label class="inputLabel">{{ form.url.label }} *</label>
+        <div class="inputWrap">
+            {{ form.url }}
+            {{ form.url.errors|display_field_errors }}
+            <span class="helpBlock">{{ form.url.help_text }}</span>
+        </div>
+    </div>
+    <div class="composerOperation">
+        <a class="btn primaryBtn" id="add_row" href="#"><i class="fa fa-plus-circle"></i> {% trans 'Add Row' %}</a>
+        <a class="btn submitBtn" id="save_as_template" href="#"><i class="fa fa-floppy-o"></i> {% trans 'Save as Template' %}</a>
+    </div>
+    <div class="composer">
+        <div class="composerRow" data-index="0">
+            <div class="composerRowControls">
+                <a href="#" title="Drag row to reorder" class="move control"><i class="fa fa-bars fa-lg"></i></a>
+                <div class="layoutControl control"></div>
+                <a href="#" class="edit control" title="Edit row"><i class="fa fa-pencil"></i></a>
+                <a href="#" class="clone control" title="Clone row"><i class="fa fa-files-o"></i></a>
+                <a href="#" class="delete control" title="Delete row"><i class="fa fa-trash-o"></i></a>
+            </div>
+            <div class="composerGrids">
+                <div class="cell span12">span12</div>
+            </div>
+        </div>
+    </div>
+    <div class="inputGroup composerOn">
+        <label class="inputLabel">{{ form.content.label }} *</label>
+        <div class="inputWrap">
+            {{ form.content}}
+            {% wysiwyg_editor "id_content" %}
+            {{ form.content.errors|display_field_errors }}
+        </div>
+    </div>
+    <div class="inputGroup formAction">
+        <a class="btn primaryBtn" href="{% url 'backoffice_manage_flatpages' %}">Cancel</a>
+        <input class="btn submitBtn" type="submit" value="Submit" />
+    </div>
+</form>
+{% endblock %}
+{% block javascripts %}
+<script type="text/javascript" src="{% static 'javascripts/composer.js' %}"></script>
+<!-- <msdropdown> -->
+<script type="text/javascript" src="{% static 'javascripts/msdropdown/jquery.dd.js' %}"></script>
+<!-- </msdropdown> -->
+<script type="text/javascript">
+$(function(){
+    $(".composerGrids").sortable({
+        placeholder: "ui-placeholder-highlight",
+        forcePlaceholderSize: true,
+        cursor: "move",
+        cursorAt: {top: 15},
+        start: function(event, ui){
+            ui.placeholder.addClass(ui.item.attr('class'));
+            ui.item.addClass((ui.item.hasClass('omega'))?'start-at-omega':'');
+        },
+        sort: function(event, ui){
+            if(ui.item.hasClass('start-at-omega')){
+                $(this).children(':last').not('.ui-placeholder-highlight').prev().addClass('omega').siblings().removeClass('omega');
+            }else{
+                $(this).children(':last').addClass('omega').siblings().removeClass('omega');
+            }
+        },
+        stop: function(event, ui){
+            $(this).children().removeClass('omega start-at-omega');
+            $(this).children(':last').addClass('omega');
+        }
+    }).disableSelection();
+
+    var layoutCount = 12;
+    var layouts = [
+        [12],
+        [6,6],
+        [4,4,4],
+        [3,3,3,3],
+        [3,9],
+        [3,6,3],
+        [2,10],
+        [2,8,2],
+        [2,2,2,6],
+        [2,2,2,2,2,2],
+        [8,4],
+        [10,2]
+    ];
+    var jsonData = $.makeArray();
+    
+    for (var i = 1; i <= layoutCount; i++) {
+        jsonData.push({image:'/static/images/row-layouts/layout_'+ i +'.png', value: i, text:'Layout '+ i});
+    };
+
+    $(".layoutControl").msDropdown({
+        byJson:{
+            data:jsonData, 
+            name:'layout',
+            width: 110
+        },
+        roundedCorner:false,
+        on: {change: function(result, selectedElement){
+                var grid = selectedElement.parents('.composerRowControls').siblings('.composerGrids');
+                var gridElements = generateComposerCells(result.value);
+                grid.html(gridElements);
+                grid.sortable('refresh');
+            }
+        }
+    }).data("dd");
+
+    var generateComposerCells = function(index){
+        var layout = layouts[index-1];
+        var elements = $.makeArray();
+        $.each(layout, function(i, val) {
+            var element = $('<div/>');
+            var classes = (i == layout.length - 1) ? 'cell omega span'+ val :'cell span'+ val;
+            element.addClass(classes);
+            element.text('span'+ val);
+            elements.push(element);
+        });
+        return elements;
+    };
+});
+</script>
+{% endblock %}

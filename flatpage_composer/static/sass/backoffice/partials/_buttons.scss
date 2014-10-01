@@ -1,0 +1,27 @@
+@import 'sassy-buttons';
+
+.btn{
+	line-height: 1em;
+	@include sassy-button-structure(5px, 13px, 0.5em 0.8em); 
+	margin: 0 !important;
+}
+
+.small{
+	font-size: 11px;
+}
+
+.primaryBtn{
+	 @include sassy-button-gradient("matte", $mediumgray);
+}
+
+.editBtn { 
+	@include sassy-button-gradient("matte", $lightgreen); 
+}
+
+.delBtn { 
+	@include sassy-button-gradient("matte", $lightred); 
+}
+
+.submitBtn { 
+	@include sassy-button-gradient("matte", $lightblue); 
+}

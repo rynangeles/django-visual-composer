@@ -1,0 +1,56 @@
+{% load i18n backoffice static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Flatpage Composer Backoffice Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="iDecorate Wedding">
+        <meta name="description" content="">
+
+        <link rel="shortcut icon" href="/{{ MEDIA_URL }}images/favicon.1.ico" type="image/x-icon" />
+        <!-- Load global stylings -->
+        <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/backoffice.css' %}">
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+    </head>
+    <body>
+    <div class="loginContainer">
+        <section id="content">
+            <header>
+                <h3><i class="fa fa-sign-in"></i> {% trans "Login" %}</h3>
+            </header>
+            <div id="login_page">
+                <form method="POST" action="{% url 'admin_login' %}">
+                    <fieldset>
+                        {{ messages|display_messages:"login_error" }}
+                        {% csrf_token %}
+                        <input type="hidden" name="next" id="next" value="{{ request.path }}" />
+                        <div class="fieldGroup">
+                            <label class="fieldLabel" for="id_username">{% trans "Username" %}:</label>
+                            <div class="field">
+                                <input type="text" placeholder="{% trans "Username" %}" name="username" id="id_username" value="{{ request.session.admin_username }}" maxlength="40" />
+                                {{ messages|display_messages:"user_empty" }}
+                            </div>
+                        </div>
+                        <div class="fieldGroup">
+                            <label class="fieldLabel" for="id_password">{% trans "Password" %}:</label>
+                            <div class="field">
+                                <input type="password" placeholder="{% trans "Password" %}" name="password" id="id_password" value="{{ request.session.admin_password }}" maxlength="40" />
+                                {{ messages|display_messages:"password_empty" }}
+                            </div>
+                        </div>
+                        <div class="fieldGroup formOperation">
+                            <input class="btn submitBtn" type="submit" class="btn btnPrimary" value="{% trans "Sign In" %}">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <footer>
+            &copy; 2013 {% trans "Flatpage Composer" %}
+        </footer>
+    </div> <!-- /container -->
+  </body>
+</html>

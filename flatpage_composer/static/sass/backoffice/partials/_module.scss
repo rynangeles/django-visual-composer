@@ -1,0 +1,93 @@
+.messages{
+	font-size: 0.8rem;
+	line-height: 1rem;
+	margin-bottom: 10px;
+	&.error{
+		color: $lightred;
+	}
+	&.success{
+		color: $lightgreen;
+	}
+	&.fieldErrors{
+		margin-bottom: 0;
+	}
+}
+
+.loginContainer{
+	width: 300px;
+	margin: 0 auto;
+	margin-top: 5%;
+	header{
+		padding: 2%;
+		h3{
+			color: white;
+			font-size: 1rem;
+			@include text-shadow(1px 1px 0 darken($darkgray, 10));
+		}
+	}
+	#content{
+		@include box-shadow(0 -10px 20px $lightgray);
+
+		#login_page{
+			margin: 2% 10%;
+			label{
+				font-size: 0.8rem;
+				line-height: 1rem;
+				color: $darkgray;
+			}
+			#{$all-text-inputs}{
+				width: 100%;
+				margin-bottom: 5px;
+			}
+			.formOperation{
+				@include clearfix;
+				padding: 10px 0 20px; 
+				text-align: right;
+			}
+		}
+	}	
+	footer{
+		margin-top: 15px;
+		text-align: center;
+	}
+}
+.headline{
+	h2{
+		font-size: 1.2rem;
+	}
+}
+.sidebar{
+	.panel{
+		margin:{
+			bottom: 10px;
+		}
+		h4{
+			color: white;
+			font-size: 0.9rem;
+			padding: 2%;
+			@include text-shadow(1px 1px 0 $mediumgray);
+			@include background(linear-gradient(top, lighten($mediumgray, 30), lighten($mediumgray, 20)));
+		}
+		ul{
+			margin: 2%;
+			li{
+				line-height: 1em;
+				@include clearfix;
+				a{
+					font-size: 0.7rem;
+					float: left;
+					&:hover{
+						text-decoration: underline;
+					}
+					&.operation{
+						float: right;
+						color: darken($darkgray, 10);
+						i{
+							color: $lightgreen;
+						}
+					}
+				}
+			}
+		}
+	}
+}

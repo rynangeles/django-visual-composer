@@ -1,0 +1,35 @@
+{% extends 'backoffice/base.html' %}
+{% load i18n backoffice static %}
+{%block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'stylesheets/sites_flatpage.css' %}">
+{% endblock %}
+{% block content %}
+<div class="contentHeader">
+    <h3>{% trans "Manage Site Pages" %}</h3>
+    <a class="btn primaryBtn" href="{% url 'backoffice_add_flatpages' %}">
+        <i class="fa fa-plus-circle"></i> {% trans 'Add Site page' %}
+    </a>
+</div>
+{{ messages|display_messages}}
+<table class="table">
+    <thead>
+        <th>{% trans 'Title' %}</th>
+        <th>{% trans 'Link' %}</th>
+        <th>{% trans 'Site' %}</th>
+        <th>{% trans 'Operation' %}</th>
+    </thead>
+    <tbody>
+        {% for flatpage in flatpages %}
+        <tr>
+            <td><a target="_blank" href="{{flatpage.url}}">{{ flatpage.title }}</a></td>
+            <td>{{ flatpage.url }}</td>
+            <td>{{ flatpage.sites.all.0 }}</td>
+            <td class="rowOperation">
+                <a class="btn small editBtn" href="{% url 'backoffice_edit_flatpages' flatpage.id %}"><i class="fa fa-pencil"></i> {% trans 'Edit' %}</a>
+                <a class="btn small delBtn" href="?action=del&pk={{ flatpage.id }}"><i class="fa fa-trash-o"></i> {% trans 'Delete' %}</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

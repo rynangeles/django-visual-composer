@@ -1,0 +1,109 @@
+// colors
+$lightgray      : #819090;
+$gray           : #708284;
+$mediumgray     : #536870;
+$darkgray       : #475B62;
+$darkblue       : #0A2933;
+$darkerblue     : #042029;
+$paleryellow    : #FCF4DC;
+$paleyellow     : #EAE3CB;
+$yellow         : #A57706;
+$orange         : #BD3613;
+$red            : #D11C24;
+$lightred       : #e86a43;
+$pink           : #C61C6F;
+$purple         : #595AB7;
+$blue           : #2176C7;
+$lightblue      : #4d8ccd;
+$cyan           : #259286;
+$green          : #738A05;
+$lightgreen     : #8cbe5f;
+
+//fonts
+$font-primary: 'Karla', sans-serif;
+$font-secondary: 'Signika Negative', sans-serif;
+$font-tertiary: 'Oxygen', sans-serif;
+
+//buttons
+$sb-base-color:      #0bc265;      // Base color of your button
+$sb-second-color:    false;        // Optional second color of button gradient
+$sb-border-radius:   10px;         // Button border radius
+$sb-border-width:    1px;          // Button border width
+$sb-padding:         0.5em 1.5em;  // Button padding
+$sb-font-size:       20px;         // Button font-size
+$sb-line-height:     1.2em;        // Button line-height
+$sb-text-color:      white;        // Button text color
+$sb-text-style:      "inset";      // Button text shadow style
+$sb-gradient-style:  "matte";      // Button gradient style
+$sb-auto-states:     true;         // Automatically create pseudo styles 
+
+//inputs
+$inputs-list: 'input[type="email"]',
+              'input[type="number"]',
+              'input[type="password"]',
+              'input[type="search"]',
+              'input[type="tel"]',
+              'input[type="text"]',
+              'input[type="url"]',
+
+              // Webkit & Gecko may change the display of these in the future
+              'input[type="color"]',
+              'input[type="date"]',
+              'input[type="datetime"]',
+              'input[type="datetime-local"]',
+              'input[type="month"]',
+              'input[type="time"]',
+              'input[type="week"]';
+
+$unquoted-inputs-list: ();
+
+@each $input-type in $inputs-list {
+  $unquoted-inputs-list: append($unquoted-inputs-list, unquote($input-type), comma);
+}
+
+$all-text-inputs: $unquoted-inputs-list;
+
+//mixins
+$input-fontsize : 12px;
+$input-borderradii : 5px;
+$input-borderwidth: 1px;
+$input-bordertype: solid;
+$input-bordercolor: $lightgray;
+$input-backgroundcolor: white;
+$input-padding: 5px;
+$input-error: $lightred;
+
+@mixin input-styles($fontsize:$input-fontsize,
+                    $borderradii:$input-borderradii,
+                    $borderwidth:$input-borderwidth,
+                    $bordertype:$input-bordertype,
+                    $bordercolor:$input-bordercolor,
+                    $backgroundcolor:$input-backgroundcolor,
+                    $padding:$input-padding,
+                    $error:$input-error){
+    #{$all-text-inputs},
+    textarea,
+    select{
+        font-size: $fontsize;
+        border: $borderwidth $bordertype $bordercolor;
+        @include border-radius($borderradii);
+        padding: $padding;
+        background:{
+            color:$backgroundcolor;
+        }
+        &:hover,
+        &:focus{
+            outline: none;
+            border:{
+                color: lighten($bordercolor, 20);
+            }
+            @include box-shadow(0 0 10px lighten($bordercolor, 40));
+        }
+        &.error{
+            border:{
+                color: lighten($error, 20);
+            }
+            @include box-shadow(0 0 10px lighten($error, 40));
+        }
+    }
+}

@@ -1,0 +1,67 @@
+@import url("http://fonts.googleapis.com/css?family=Signika+Negative:300,400,600,700|Oxygen:400,300,700|Karla:400,400italic,700,700italic");
+@import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+
+body{
+	font:{
+		family: $font-primary;
+		size: 1.2rems;
+	}
+	line-height: 160%;
+	color: $gray;
+}
+
+#{headings()}{
+	font:{
+		family: $font-secondary;
+		weight: normal;
+	}
+	line-height: 1.2em;
+	color: $darkgray;
+}
+
+h1{
+	font:{
+		size:2rem;
+	}
+}
+
+h2{
+	font:{
+		size:1.8rem;
+	}
+}
+
+h3{
+	font:{
+		size:1.6rem;
+	}
+}
+
+h4{
+	font:{
+		size:1.4rem;
+	}
+}
+
+h5{
+	font:{
+		size:1.2rem;
+	}
+}
+
+a{
+	color: $darkgray;
+	text:{
+		decoration: none;
+	}
+	&:hover{
+	}
+}
+
+p{
+	font-size: 0.9rem;
+	line-height: 1.2rem;
+	margin:{
+		bottom: 5px;
+	}
+}

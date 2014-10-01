@@ -1,0 +1,17 @@
+{% load i18n backoffice static %}
+<header>
+	<div class="hero">
+		<section class="layout">
+			<div class="branding">
+				<a href="{% url 'admin' %}">
+					<h2><i class="fa fa-pencil-square-o"></i><span>Visual Composer</span></h2>
+				</a>
+			</div><!-- branding -->
+			<div class="welcome">
+				<span>{% trans "Welcome! "%} {{ user.username }}</span> | 
+				<a href="{% url 'admin' %}"><i class="fa fa-home"></i> {% trans "Home "%}</a> |
+				<a href="{% url 'admin_logout' %}"><i class="fa fa-sign-out"></i> {% trans "Logout "%}</a>
+			</div><!-- welcome -->
+		</section><!-- layout -->
+	</div><!-- hero -->
+</header><!-- header -->

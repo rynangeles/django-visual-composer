@@ -1,0 +1,74 @@
+// susy setup ---------------------------------------------
+$total-columns 			: 12;
+$column-width 			: 6em;
+$gutter-width 			: 1em;
+$grid-padding 			: $gutter-width;
+
+@include border-box-sizing;
+
+$small 					: 30em;
+$medium 				: 47em;
+$large 					: 75em;
+
+@include input-styles;
+
+// layout ---------------------------------------------
+.layout{
+	@include container;
+	padding: 0.5% 1%;
+}
+	
+// header ---------------------------------------------
+header{
+	@include background(linear-gradient(top, lighten($darkgray, 5), $darkgray));
+	.branding{
+		@include span-columns(6,12);
+		h2{
+			color: white;
+			@include text-shadow(1px 1px 0 darken($darkgray, 10));
+			span{
+				font-size: 0.6em;
+			}
+		}
+	}
+	.welcome{
+		color: white;
+		font-size: 12px;
+		@include span-columns(6 omega,12);
+		text:{
+			align: right;
+		}
+		a{
+			color: white;
+			@include text-shadow(1px 1px 0 darken($darkgray, 10));
+			&:hover{
+				color: $lightgray;
+			}
+		}
+	}
+}
+
+// content --------------------------------------------
+#content{
+	.headline{
+		@include span-columns(12,12);
+	}
+	.primary{
+		@include span-columns(9 omega,12);
+	}
+	.secondary{
+		@include span-columns(3,12);
+		background:{
+			color: lighten($lightgray, 35);
+		}
+	}
+}
+
+// footer-----------------------------------------------
+	
+footer{
+	.copyright{
+		font-size: 12px;
+		@include span-columns(12,12);
+	}
+}

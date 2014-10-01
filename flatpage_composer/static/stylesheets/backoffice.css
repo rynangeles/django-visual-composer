@@ -1,0 +1,582 @@
+@import url("http://fonts.googleapis.com/css?family=Signika+Negative:300,400,600,700|Oxygen:400,300,700|Karla:400,400italic,700,700italic");
+@import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+/* line 17, ../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 4, ../sass/backoffice/_base.scss */
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 1.2rems;
+  line-height: 160%;
+  color: #708284;
+}
+
+/* line 13, ../sass/backoffice/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Signika Negative", sans-serif;
+  font-weight: normal;
+  line-height: 1.2em;
+  color: #475b62;
+}
+
+/* line 22, ../sass/backoffice/_base.scss */
+h1 {
+  font-size: 2rem;
+}
+
+/* line 28, ../sass/backoffice/_base.scss */
+h2 {
+  font-size: 1.8rem;
+}
+
+/* line 34, ../sass/backoffice/_base.scss */
+h3 {
+  font-size: 1.6rem;
+}
+
+/* line 40, ../sass/backoffice/_base.scss */
+h4 {
+  font-size: 1.4rem;
+}
+
+/* line 46, ../sass/backoffice/_base.scss */
+h5 {
+  font-size: 1.2rem;
+}
+
+/* line 52, ../sass/backoffice/_base.scss */
+a {
+  color: #475b62;
+  text-decoration: none;
+}
+
+/* line 61, ../sass/backoffice/_base.scss */
+p {
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  margin-bottom: 5px;
+}
+
+/* line 3, ../sass/backoffice/partials/_buttons.scss */
+.btn {
+  line-height: 1em;
+  font-size: 13px;
+  padding: 0.5em 0.8em;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 !important;
+}
+
+/* line 9, ../sass/backoffice/partials/_buttons.scss */
+.small {
+  font-size: 11px;
+}
+
+/* line 13, ../sass/backoffice/partials/_buttons.scss */
+.primaryBtn {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF536870', endColorstr='#FF283235');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #769099), color-stop(70%, #536870));
+  background: -webkit-linear-gradient(#769099, #536870 70%);
+  background: -moz-linear-gradient(#769099, #536870 70%);
+  background: -o-linear-gradient(#769099, #536870 70%);
+  background: linear-gradient(#769099, #536870 70%);
+  -webkit-box-shadow: #a2b3ba 0 1px 0 inset;
+  -moz-box-shadow: #a2b3ba 0 1px 0 inset;
+  box-shadow: #a2b3ba 0 1px 0 inset;
+  border: 1px solid #485a61;
+  color: white;
+  text-shadow: #3a494e 0 -1px 0;
+}
+/* line 15, ../../../../../../../../../var/lib/gems/1.8/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.primaryBtn:hover {
+  text-decoration: none;
+}
+/* line 18, ../../../../../../../../../var/lib/gems/1.8/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.primaryBtn:hover {
+  background-color: #485a61;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #69838d), color-stop(75%, #485a61));
+  background: -webkit-linear-gradient(#69838d 3%, #485a61 75%);
+  background: -moz-linear-gradient(#69838d 3%, #485a61 75%);
+  background: -o-linear-gradient(#69838d 3%, #485a61 75%);
+  background: linear-gradient(#69838d 3%, #485a61 75%);
+}
+/* line 21, ../../../../../../../../../var/lib/gems/1.8/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.primaryBtn:active {
+  -webkit-box-shadow: #425259 0 1px 2px inset;
+  -moz-box-shadow: #425259 0 1px 2px inset;
+  box-shadow: #425259 0 1px 2px inset;
+}
+/* line 6, ../../../../../../../../../var/lib/gems/1.8/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.primaryBtn.disabled, .primaryBtn[disabled] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  background: #536870;
+  cursor: default;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 17, ../sass/backoffice/partials/_buttons.scss */
+.editBtn {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF8CBE5F', endColorstr='#FF598235');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #b3d495), color-stop(70%, #8cbe5f));
+  background: -webkit-linear-gradient(#b3d495, #8cbe5f 70%);
+  background: -moz-linear-gradient(#b3d495, #8cbe5f 70%);
+  background: -o-linear-gradient(#b3d495, #8cbe5f 70%);
+  background: linear-gradient(#b3d495, #8cbe5f 70%);
+  -webkit-box-shadow: #daeacc 0 1px 0 inset;
+  -moz-box-shadow: #daeacc 0 1px 0 inset;
+  box-shadow: #daeacc 0 1px 0 inset;
+  border: 1px solid #7fb74d;
+  color: white;
+  text-shadow: #6fa141 0 -1px 0;
+}
+/* line 15, ../../../../../../../../../var/lib/gems/1.8/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.editBtn:hover {
+  text-decoration: none;
+}
+/* line 18, ../../../../../../../../../var/lib/gems/1.8/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.editBtn:hover {
+  background-color: #7fb74d;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #a6cd83), color-stop(75%, #7fb74d));
+  background: -webkit-linear-gradient(#a6cd83 3%, #7fb74d 75%);
+  background: -moz-linear-gradient(#a6cd83 3%, #7fb74d 75%);
+  background: -o-linear-gradient(#a6cd83 3%, #7fb74d 75%);
+  background: linear-gradient(#a6cd83 3%, #7fb74d 75%);
+}
+/* line 21, ../../../../../../../../../var/lib/gems/1.8/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.editBtn:active {
+  -webkit-box-shadow: #77ae47 0 1px 2px inset;
+  -moz-box-shadow: #77ae47 0 1px 2px inset;
+  box-shadow: #77ae47 0 1px 2px inset;
+}
+/* line 6, ../../../../../../../../../var/lib/gems/1.8/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.editBtn.disabled, .editBtn[disabled] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  background: #8cbe5f;
+  cursor: default;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 21, ../sass/backoffice/partials/_buttons.scss */
+.delBtn {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE86A43', endColorstr='#FFB03A15');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f0a087), color-stop(70%, #e86a43));
+  background: -webkit-linear-gradient(#f0a087, #e86a43 70%);
+  background: -moz-linear-gradient(#f0a087, #e86a43 70%);
+  background: -o-linear-gradient(#f0a087, #e86a43 70%);
+  background: linear-gradient(#f0a087, #e86a43 70%);
+  -webkit-box-shadow: #f9d6cb 0 1px 0 inset;
+  -moz-box-shadow: #f9d6cb 0 1px 0 inset;
+  box-shadow: #f9d6cb 0 1px 0 inset;
+  border: 1px solid #e5582c;
+  color: white;
+  text-shadow: #d6471a 0 -1px 0;
+}
+/* line 15, ../../../../../../../../../var/lib/gems/1.8/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.delBtn:hover {
+  text-decoration: none;
+}
+/* line 18, ../../../../../../../../../var/lib/gems/1.8/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.delBtn:hover {
+  background-color: #e5582c;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #ee8e70), color-stop(75%, #e5582c));
+  background: -webkit-linear-gradient(#ee8e70 3%, #e5582c 75%);
+  background: -moz-linear-gradient(#ee8e70 3%, #e5582c 75%);
+  background: -o-linear-gradient(#ee8e70 3%, #e5582c 75%);
+  background: linear-gradient(#ee8e70 3%, #e5582c 75%);
+}
+/* line 21, ../../../../../../../../../var/lib/gems/1.8/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.delBtn:active {
+  -webkit-box-shadow: #e44d1f 0 1px 2px inset;
+  -moz-box-shadow: #e44d1f 0 1px 2px inset;
+  box-shadow: #e44d1f 0 1px 2px inset;
+}
+/* line 6, ../../../../../../../../../var/lib/gems/1.8/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.delBtn.disabled, .delBtn[disabled] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  background: #e86a43;
+  cursor: default;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 25, ../sass/backoffice/partials/_buttons.scss */
+.submitBtn {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF4D8CCD', endColorstr='#FF27598D');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #89b3de), color-stop(70%, #4d8ccd));
+  background: -webkit-linear-gradient(#89b3de, #4d8ccd 70%);
+  background: -moz-linear-gradient(#89b3de, #4d8ccd 70%);
+  background: -o-linear-gradient(#89b3de, #4d8ccd 70%);
+  background: linear-gradient(#89b3de, #4d8ccd 70%);
+  -webkit-box-shadow: #c4d9ef 0 1px 0 inset;
+  -moz-box-shadow: #c4d9ef 0 1px 0 inset;
+  box-shadow: #c4d9ef 0 1px 0 inset;
+  border: 1px solid #397fc7;
+  color: white;
+  text-shadow: #316fae 0 -1px 0;
+}
+/* line 15, ../../../../../../../../../var/lib/gems/1.8/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.submitBtn:hover {
+  text-decoration: none;
+}
+/* line 18, ../../../../../../../../../var/lib/gems/1.8/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.submitBtn:hover {
+  background-color: #397fc7;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #75a6d8), color-stop(75%, #397fc7));
+  background: -webkit-linear-gradient(#75a6d8 3%, #397fc7 75%);
+  background: -moz-linear-gradient(#75a6d8 3%, #397fc7 75%);
+  background: -o-linear-gradient(#75a6d8 3%, #397fc7 75%);
+  background: linear-gradient(#75a6d8 3%, #397fc7 75%);
+}
+/* line 21, ../../../../../../../../../var/lib/gems/1.8/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.submitBtn:active {
+  -webkit-box-shadow: #3578bc 0 1px 2px inset;
+  -moz-box-shadow: #3578bc 0 1px 2px inset;
+  box-shadow: #3578bc 0 1px 2px inset;
+}
+/* line 6, ../../../../../../../../../var/lib/gems/1.8/gems/sassy-buttons-0.2.6/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+.submitBtn.disabled, .submitBtn[disabled] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  background: #4d8ccd;
+  cursor: default;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 14, ../../../../../../../../../var/lib/gems/1.8/gems/susy-1.0.9/sass/susy/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 86, ../sass/_variables.scss */
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"],
+textarea,
+select {
+  font-size: 12px;
+  border: 1px solid #819090;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: white;
+}
+/* line 95, ../sass/_variables.scss */
+input[type="email"]:hover, input[type="email"]:focus, input[type="number"]:hover, input[type="number"]:focus, input[type="password"]:hover, input[type="password"]:focus, input[type="search"]:hover, input[type="search"]:focus, input[type="tel"]:hover, input[type="tel"]:focus, input[type="text"]:hover, input[type="text"]:focus, input[type="url"]:hover, input[type="url"]:focus, input[type="color"]:hover, input[type="color"]:focus, input[type="date"]:hover, input[type="date"]:focus, input[type="datetime"]:hover, input[type="datetime"]:focus, input[type="datetime-local"]:hover, input[type="datetime-local"]:focus, input[type="month"]:hover, input[type="month"]:focus, input[type="time"]:hover, input[type="time"]:focus, input[type="week"]:hover, input[type="week"]:focus,
+textarea:hover,
+textarea:focus,
+select:hover,
+select:focus {
+  outline: none;
+  border-color: #b7c0c0;
+  -webkit-box-shadow: 0 0 10px #edf0f0;
+  -moz-box-shadow: 0 0 10px #edf0f0;
+  box-shadow: 0 0 10px #edf0f0;
+}
+/* line 102, ../sass/_variables.scss */
+input[type="email"].error, input[type="number"].error, input[type="password"].error, input[type="search"].error, input[type="tel"].error, input[type="text"].error, input[type="url"].error, input[type="color"].error, input[type="date"].error, input[type="datetime"].error, input[type="datetime-local"].error, input[type="month"].error, input[type="time"].error, input[type="week"].error,
+textarea.error,
+select.error {
+  border-color: #f3b29e;
+  -webkit-box-shadow: 0 0 10px #fefaf9;
+  -moz-box-shadow: 0 0 10px #fefaf9;
+  box-shadow: 0 0 10px #fefaf9;
+}
+
+/* line 16, ../sass/backoffice/partials/_layout.scss */
+.layout {
+  *zoom: 1;
+  max-width: 85em;
+  _width: 85em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5% 1%;
+}
+/* line 38, ../../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.layout:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 22, ../sass/backoffice/partials/_layout.scss */
+header {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #526971), color-stop(100%, #475b62));
+  background: -webkit-linear-gradient(top, #526971, #475b62);
+  background: -moz-linear-gradient(top, #526971, #475b62);
+  background: -o-linear-gradient(top, #526971, #475b62);
+  background: linear-gradient(top, #526971, #475b62);
+}
+/* line 24, ../sass/backoffice/partials/_layout.scss */
+header .branding {
+  width: 49.39759%;
+  float: left;
+  margin-right: 1.20482%;
+  display: inline;
+}
+/* line 26, ../sass/backoffice/partials/_layout.scss */
+header .branding h2 {
+  color: white;
+  text-shadow: 1px 1px 0 #324044;
+}
+/* line 29, ../sass/backoffice/partials/_layout.scss */
+header .branding h2 span {
+  font-size: 0.6em;
+}
+/* line 34, ../sass/backoffice/partials/_layout.scss */
+header .welcome {
+  color: white;
+  font-size: 12px;
+  width: 49.39759%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+  text-align: right;
+}
+/* line 41, ../sass/backoffice/partials/_layout.scss */
+header .welcome a {
+  color: white;
+  text-shadow: 1px 1px 0 #324044;
+}
+/* line 44, ../sass/backoffice/partials/_layout.scss */
+header .welcome a:hover {
+  color: #819090;
+}
+
+/* line 53, ../sass/backoffice/partials/_layout.scss */
+#content .headline {
+  width: 100%;
+  float: left;
+  margin-right: 1.20482%;
+  display: inline;
+}
+/* line 56, ../sass/backoffice/partials/_layout.scss */
+#content .primary {
+  width: 74.6988%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+/* line 59, ../sass/backoffice/partials/_layout.scss */
+#content .secondary {
+  width: 24.09639%;
+  float: left;
+  margin-right: 1.20482%;
+  display: inline;
+  background-color: #e0e4e4;
+}
+
+/* line 70, ../sass/backoffice/partials/_layout.scss */
+footer .copyright {
+  font-size: 12px;
+  width: 100%;
+  float: left;
+  margin-right: 1.20482%;
+  display: inline;
+}
+
+/* line 1, ../sass/backoffice/partials/_module.scss */
+.messages {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  margin-bottom: 10px;
+}
+/* line 5, ../sass/backoffice/partials/_module.scss */
+.messages.error {
+  color: #e86a43;
+}
+/* line 8, ../sass/backoffice/partials/_module.scss */
+.messages.success {
+  color: #8cbe5f;
+}
+/* line 11, ../sass/backoffice/partials/_module.scss */
+.messages.fieldErrors {
+  margin-bottom: 0;
+}
+
+/* line 16, ../sass/backoffice/partials/_module.scss */
+.loginContainer {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+/* line 20, ../sass/backoffice/partials/_module.scss */
+.loginContainer header {
+  padding: 2%;
+}
+/* line 22, ../sass/backoffice/partials/_module.scss */
+.loginContainer header h3 {
+  color: white;
+  font-size: 1rem;
+  text-shadow: 1px 1px 0 #324044;
+}
+/* line 28, ../sass/backoffice/partials/_module.scss */
+.loginContainer #content {
+  -webkit-box-shadow: 0 -10px 20px #819090;
+  -moz-box-shadow: 0 -10px 20px #819090;
+  box-shadow: 0 -10px 20px #819090;
+}
+/* line 31, ../sass/backoffice/partials/_module.scss */
+.loginContainer #content #login_page {
+  margin: 2% 10%;
+}
+/* line 33, ../sass/backoffice/partials/_module.scss */
+.loginContainer #content #login_page label {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  color: #475b62;
+}
+/* line 38, ../sass/backoffice/partials/_module.scss */
+.loginContainer #content #login_page input[type="email"], .loginContainer #content #login_page input[type="number"], .loginContainer #content #login_page input[type="password"], .loginContainer #content #login_page input[type="search"], .loginContainer #content #login_page input[type="tel"], .loginContainer #content #login_page input[type="text"], .loginContainer #content #login_page input[type="url"], .loginContainer #content #login_page input[type="color"], .loginContainer #content #login_page input[type="date"], .loginContainer #content #login_page input[type="datetime"], .loginContainer #content #login_page input[type="datetime-local"], .loginContainer #content #login_page input[type="month"], .loginContainer #content #login_page input[type="time"], .loginContainer #content #login_page input[type="week"] {
+  width: 100%;
+  margin-bottom: 5px;
+}
+/* line 42, ../sass/backoffice/partials/_module.scss */
+.loginContainer #content #login_page .formOperation {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 10px 0 20px;
+  text-align: right;
+}
+/* line 49, ../sass/backoffice/partials/_module.scss */
+.loginContainer footer {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* line 55, ../sass/backoffice/partials/_module.scss */
+.headline h2 {
+  font-size: 1.2rem;
+}
+
+/* line 60, ../sass/backoffice/partials/_module.scss */
+.sidebar .panel {
+  margin-bottom: 10px;
+}
+/* line 64, ../sass/backoffice/partials/_module.scss */
+.sidebar .panel h4 {
+  color: white;
+  font-size: 0.9rem;
+  padding: 2%;
+  text-shadow: 1px 1px 0 #536870;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a2b3ba), color-stop(100%, #859ca4));
+  background: -webkit-linear-gradient(top, #a2b3ba, #859ca4);
+  background: -moz-linear-gradient(top, #a2b3ba, #859ca4);
+  background: -o-linear-gradient(top, #a2b3ba, #859ca4);
+  background: linear-gradient(top, #a2b3ba, #859ca4);
+}
+/* line 71, ../sass/backoffice/partials/_module.scss */
+.sidebar .panel ul {
+  margin: 2%;
+}
+/* line 73, ../sass/backoffice/partials/_module.scss */
+.sidebar .panel ul li {
+  line-height: 1em;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 76, ../sass/backoffice/partials/_module.scss */
+.sidebar .panel ul li a {
+  font-size: 0.7rem;
+  float: left;
+}
+/* line 79, ../sass/backoffice/partials/_module.scss */
+.sidebar .panel ul li a:hover {
+  text-decoration: underline;
+}
+/* line 82, ../sass/backoffice/partials/_module.scss */
+.sidebar .panel ul li a.operation {
+  float: right;
+  color: #324044;
+}
+/* line 85, ../sass/backoffice/partials/_module.scss */
+.sidebar .panel ul li a.operation i {
+  color: #8cbe5f;
+}

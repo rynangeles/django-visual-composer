@@ -1,0 +1,196 @@
+.contentHeader{
+    @include clearfix;
+    margin-bottom: 10px;
+    h3{
+        font-size: 1.1rem;
+        float:left;
+    }
+    .btn{
+        float:right;
+    }
+}
+.table{
+    width: 100%;
+    border: 1px solid lighten($mediumgray, 20);
+    @include inner-table-borders(1px, lighten($mediumgray, 40));
+    @include alternating-rows-and-columns($blue, lighten($lightgray, 40), black);
+    td,th{
+        padding: 0.4% 1%;
+    }
+    td{
+        font-size: 0.7rem;
+        &.rowOperation{
+            width: 9rem;
+            text-align: center;
+        }
+    }
+    th{
+        text-align: center;
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: white;
+        @include text-shadow(1px 1px 0 $mediumgray);
+        @include background(linear-gradient(top, lighten($mediumgray, 30), lighten($mediumgray, 20)));
+    }
+}
+
+.inputGroup{
+    @include clearfix;
+    margin-bottom: 10px;
+    .inputLabel{
+        float: left;
+        width: 8em;
+        margin-right: 1em;
+        text-align: right;
+        font-size: 0.9rem;
+        color: $darkgray;
+        &:after{
+            content: " :";
+        }
+    }
+    .inputWrap{
+        float: left;
+    }
+    .helpBlock{
+        font-size: 0.8rem;
+        font-style: italic;
+        display: block;
+    }
+    &.formAction{
+        padding: 1%;
+        text-align: right;
+        background:{
+            color: lighten($lightgray, 35);
+        }
+        .btn{
+            vertical-align: bottom;
+        }
+    }
+}
+
+// composer
+.composerOperation{
+    margin-bottom: 10px;
+    // text-align: right;
+}
+.composerOn{
+    display: none;
+}
+.composer{
+    padding: 1%;
+    padding-bottom: 0;
+    border: 1px solid lighten($lightgray, 30);
+    margin-bottom: 10px;
+    .composerRow{
+        margin-bottom: 10px;
+        .composerRowControls{
+            @include pie-clearfix;
+            position: relative;
+            z-index: 2;
+            .control{
+                margin-right: 1px;
+                line-height: 1em;
+                font-size: 1rem;
+                float: left;
+            }
+            a.control{
+                background:{
+                    color: lighten($lightgray, 30);
+                }
+                color: lighten($mediumgray, 28); 
+                @include text-shadow(0 1px lighten($lightgray, 40));
+                @include border-top-left-radius(3px);
+                @include border-top-right-radius(3px);
+                padding: 5px;
+                border: 1px solid lighten($lightgray, 25);
+                border-bottom: none;
+                width: 2em;
+                display: inline-block;
+                text-align: center;
+                &:hover{
+                    color: lighten($mediumgray, 15); 
+                }
+                &.move{
+                    color: lighten($mediumgray, 40); 
+                    background:{
+                        color: lighten($lightgray, 35);
+                    }
+                    border-bottom: 1px solid lighten($lightgray, 35);
+                    cursor: default;
+                    &:hover{
+                        color: lighten($mediumgray, 40); 
+                    }
+                    margin-bottom: -1px;
+                }
+            }
+        }
+        .composerGrids{
+            @include clearfix;
+            background:{
+                color: lighten($lightgray, 35);
+            }
+            border: 1px solid lighten($lightgray, 25);
+            padding: 1%;
+            .cell{
+                background-color: white;
+                border: 1px solid lighten($lightgray, 30);
+            }
+            $class-slug: span !default;
+            @for $i from 1 through 12{
+                .#{$class-slug}#{$i}{
+                    @include span-columns($i,12);
+                    &.omega{
+                        @include span-columns($i omega,12);
+                    }
+                }
+            }
+        }
+    }
+    .ui-placeholder-highlight{
+        background:{
+            color: transparent !important;
+            image: url("/static/images/diagonal_stripes.png");
+            repeat: repeat;
+        }
+        border: none !important;
+    }
+    .dd {
+        font-size: 0.7rem;
+        @include border-top-left-radius(3px);
+        @include border-top-right-radius(3px);
+        border: 1px solid lighten($lightgray, 25);
+        border-bottom: none;
+        .ddTitle{
+            color: lighten($mediumgray, 15); 
+            background:{
+                color: lighten($lightgray, 30);
+                image: none;
+            }
+            .ddTitleText{
+                padding:5px 25px 5px 5px;
+            }
+        }
+        .divider{
+            border: {
+                left: 1px solid lighten($lightgray, 25);
+                right: 1px solid lighten($lightgray, 32);
+            }
+        }
+        .ddArrow{
+            text-align: center;
+            display:inline-block; 
+            position:absolute; 
+            top:50%; 
+            right:5px;
+            font-size: 1.7em;
+            color: lighten($mediumgray, 28); 
+            @include text-shadow(0 1px lighten($lightgray, 40));
+            background:{
+                image: none;
+            }
+        }
+        .ddArrow:hover{
+            color: lighten($mediumgray, 15); 
+        }
+    }
+}

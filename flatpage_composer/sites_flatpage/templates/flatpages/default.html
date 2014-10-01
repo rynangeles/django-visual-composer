@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %}FLatpage Composer | {{ flatpage.title }}{% endblock %}
+{% block style %}
+{% endblock %}
+{% block content %}
+<h1>{{ flatpage.title }}</h1>
+<div id="flatpage_content">{{ flatpage.content|safe }}</div>
+{% endblock %}
+{% block javascripts %}
+{% endblock %}

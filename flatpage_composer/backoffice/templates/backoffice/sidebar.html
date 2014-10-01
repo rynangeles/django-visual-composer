@@ -1,0 +1,28 @@
+{% load i18n backoffice static %}
+<div class="sidebar">
+	<div class="panel">
+		<h4>Site Pages</h4>
+		<ul class="nav verticalNav">
+			<li><a href="{% url 'backoffice_manage_flatpages' %}">Pages</a>
+				<a class="operation" href="{% url 'backoffice_add_flatpages' %}"><i class="fa fa-plus"></i> Add</a>
+			</li>
+		</ul>
+	</div>
+	<div class="panel">
+		<h4>Page Custom Content</h4>
+		<ul class="nav verticalNav">
+			<li><a href="#">Accordion</a>
+				<a class="operation" href="#"><i class="fa fa-plus"></i> Add</a>
+			</li>
+			<li><a href="#">Tab Content</a>
+				<a class="operation" href="#"><i class="fa fa-plus"></i> Add</a>
+			</li>
+			<li><a href="#">Gallery</a>
+				<a class="operation" href="#"><i class="fa fa-plus"></i> Add</a>
+			</li>
+			<li><a href="#">image slider</a>
+				<a class="operation" href="#"><i class="fa fa-plus"></i> Add</a>
+			</li>
+		</ul>
+	</div>
+</div>
